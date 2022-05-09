@@ -39,7 +39,8 @@ class Form(BaseComponent):
         tc.contentPane(title='!![en]Headers').inlineTableHandler(relation='@header', datapath='#FORM.header', viewResource='ViewFromRequest')
         tc.contentPane(title='!![en]Authorization')
         tc.contentPane(title='!![en]Body',margin='25px').simpleTextArea(value='^.body', height='500px')
-        tc.contentPane(title='!![en]Response')
+        tc.contentPane(title='!![en]Response').simpleTextArea(value='^.response', height='600px')
+        tc.contentPane(title='!![en]Debug').simpleTextArea(value='^.debug', height='600px')
 
     def th_options(self):
         return dict(dialog_height='400px', dialog_width='600px' )
