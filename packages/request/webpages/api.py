@@ -23,8 +23,20 @@ class GnrCustomWebPage(object):
 
     @public_method #http://localhost:8080/request/api/test
     def test(self,*args, **kwargs):
-        self.request = self.request._request
-        self.response = self.response._response
+        print("Test",args,kwargs)
+        return "Test"
+
+
+    @public_method #(tags='utentexyz')       #http://localhost:8080/request/api/test
+    def pippo(self,*args, **kwargs):
+        print("Pippo",args,kwargs)
+        # callerpageid=kwargs.get('_callerpageid')
+        print(x)
+        return "Pippo"
+
+    @public_method #http://localhost:8080/request/api/test
+    def print(self,*args, **kwargs):
+        # SERVE PER POTER USARE IL METODO debug 
         self.requestId = kwargs['request_id']
         # print('here!!')
         # print(self.requestId)

@@ -22,7 +22,9 @@ class Table(object):
         method = request['method_type']
         body = request['body']
         auth = None
-        params=dict()
+        # params=dict(_callerpageid=self.db.currentPage.page_id, _debugmode=True)
+        params=dict(_debugmode=True)
+
         headers=dict()
 
         headers_params = self.db.table('request.header').query(columns='$key,$value', where='$request_id=:requestId',requestId=request['id'], oreder_by='$_row_count').fetch()
