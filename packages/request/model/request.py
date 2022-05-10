@@ -49,6 +49,9 @@ class Table(object):
             rec['response'] = r.text
         self.db.commit()
         self.notifyDbUpdate(request['id'])
+
+    def onDuplicating_many(self, record, copy_number=None, copy_label=None):
+        record['endpoint'] = record['endpoint'] + '/Copia' + str(copy_number+1)
         
        
         

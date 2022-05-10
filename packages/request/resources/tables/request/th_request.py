@@ -43,4 +43,4 @@ class Form(BaseComponent):
         tc.contentPane(title='!![en]Debug').simpleTextArea(value='^.debug', height='600px')
 
     def th_options(self):
-        return dict(dialog_height='400px', dialog_width='600px' )
+        return dict(dialog_height='400px', dialog_width='600px',duplicate=True)
